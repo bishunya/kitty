@@ -1,16 +1,26 @@
 package ru.kitty;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner nameCats = new Scanner(System.in);
-        String Man, Color;
-        int Old;
-        System.out.println("How old your cat?");
-        Old = nameCats.nextInt();
-        System.out.println("Old your cat: " + Old);
-
-
+        int old = 0;
+        System.out.println("How year your cat?");
+        old = nameCats.nextInt();
+        if (old == 0) {
+            System.out.println("How months your cat? ");
+            old = nameCats.nextInt();
+            if (old == 0) {
+                System.out.println("How day your cat?");
+                old = nameCats.nextInt();
+                System.out.println("Old your cat: " + old + " day");
+            }
+            else {
+                System.out.println("Old your cat: " + old + " month");
+            }
+        }
+        else System.out.println("Old your cat: " + old + " year");
         //System.out.println("qwe");
         //System.out.println("Тут тоже будут котеечки");
     }

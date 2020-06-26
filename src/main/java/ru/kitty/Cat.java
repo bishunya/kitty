@@ -3,14 +3,16 @@ package ru.kitty;
 public class Cat {
     private String name;
     private int age;
+    private String color;
 
     public Cat() {
 
     }
 
-    public Cat(String name, int age) {
+    public Cat(String name, int age, String color) {
         this.name = name;
         this.age = age;
+        this.color = color;
     }
 
     public String getName() {
@@ -28,6 +30,15 @@ public class Cat {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public void may(String text) {
         System.out.println(text);
     }
